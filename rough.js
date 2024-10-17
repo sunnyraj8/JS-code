@@ -1,4 +1,3 @@
-function poem(){
-    console.log("Twinkle, twinkle, little star,\nHow I wonder what you are!\nUp above the world so high,\nLike a diamond in the sky");
-}
-poem();
+let name=prompt("Enter a name!");
+let age= prompt("Enter the age");
+console.log(name," is ",age, " years old.")
