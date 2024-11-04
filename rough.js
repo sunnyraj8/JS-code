@@ -1,23 +1,17 @@
-// Qs1. Square and sum the array elements using the arrow function and then find the
-// average of the array.
+// Qs3. Create an input element on the page with a placeholder ”enter your name” and an
+// H2 heading on the page inside HTML.
+// The purpose of this input element is to enter a user’s name so it should only input
+// letters from a-z, A-Z and space (all other characters should not be detected).
+// Whenever the user inputs their name, their input should be dynamically visible inside
+// the heading.
+// [Please note that no other character apart from the allowed characters should be
+// visible in the heading]
 
-let arr=[2,4,6,8,10,12,14,16];
-
-
-
-// Qs2. Create a new array using the map function whose each element is equal to the
-// original element plus 5.
-
-// let arr2=[1,5,8,7,6,10,16,20];
-// let abc=arr2.map(function (el){
-//     return el+5;
-// })
-// console.log(abc);
-
-// Qs3. Create a new array whose elements are in uppercase of words present in the
-// original array.
-// Qs4. Write a function called doubleAndReturnArgs which accepts an array and a
-// variable number of arguments. The function should return a new array with the original
-// array values and all of the additional arguments doubled.
-// Qs5. Write a function called mergeObjects that accepts two objects and returns a new
-// object which contains all the keys and values of the first object and second object.
+let inp1=document.querySelector("#inp1");
+let h2=document.querySelector("h2");
+inp1.addEventListener("input",function (){
+    let filteredName = inp1.value.replace(/[^a-zA-Z\s]/g, "");
+    inp1.value = filteredName;
+    h2.innerText=inp1.value;
+    
+})

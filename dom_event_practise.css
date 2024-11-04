@@ -1,0 +1,16 @@
+div{
+    width: 1000px;
+    height: 500px;
+     border: 2px solid black;
+}
+body {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Full viewport height */
+    margin: 0;                /* Remove default margin */
+  }
+button{
+    width: 100px;
+    height: 80px;
+}  
