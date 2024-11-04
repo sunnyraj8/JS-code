@@ -9,12 +9,19 @@ function abc(){
     li.textContent = val;
     ul.appendChild(li);
     inp.value="";
-}
+    let delBtn = document.createElement("button");
+    delBtn.innerText="delete";
+    delBtn.classList.add("delete");
 
-// let lis=document.querySelectorAll("li")
-// for(li of lis){
-//     li.addEventListener("click",function (){
-//         li.remove();
-//     })
-// }
+    li.appendChild(delBtn);
+}
+ul.addEventListener("click",function (event){
+    if(event.target.nodeName=="BUTTON") {
+        let listItem = event.target.parentElement;
+        listItem.remove();
+        console.log("deleted");
+        
+    }
+})
+
 
